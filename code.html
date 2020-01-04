@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Classic Homepage</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style1.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Seymour one" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+
+<style>
+  body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}body, html {  height: 100%;  line-height: 1.8;}
+ 
+.hedfontbig {  font-size: 49px;
+  font-family: "Seymour one";}
+
+.hedfontsml {  font-size: 35px;
+  font-family: "Seymour one";}
+
+.bgimg-1 {  background-position: center;  background-size: cover;  background-image: url("mainbg.jpeg");  min-height: 100%;}.ag-bar .ag-button {  padding: 32px 16px;
+  color:#ffff00;}.hero-image {
+  background-image: url("mainbg.jpeg");
+  background-color: #cccccc;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+ 
+  .jumbotron {
+    background-color: #000000;
+    color: #fff;
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+  }
+  .nw-container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+.bg-dark {
+    background-color: #a9a9a9;
+  }
+  .logo-small {
+    color: #f4511e;
+    font-size: 50px;
+  }
+  .logo {
+    color: #f4511e;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #ffff00;
+  }
+  .carousel-indicators li {
+    border-color: #ffff00;
+  }
+  .carousel-indicators li.active {
+    background-color: #ffff00;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid #ffff00; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #ffff00;
+    background-color: #fff !important;
+    color: #000000;
+  }
+  .panel-heading {
+    color: #000 !important;
+    background-color: #ffff00 !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #f4511e;
+    color: #fff;
+  }
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f4511e;
+  }
+.btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+  </style>
+</head>
+
+<body> 
+<!-- ============================== Top Bar ======================================= -->
+<div class="ag-top">  <div class="ag-bar ag-black ag-card-2" id="myNavbar">    <a href="#home" class="ag-bar-item ag-button ag-wide"><img src="logo.png" height="50" width="100"></a>					    <!-- Right-sided navbar links -->    <div class="ag-right ag-hide-small">      <a href="#about" class="ag-bar-item ag-button">ABOUT</a>      <a href="#team" class="ag-bar-item ag-button"><i class="fa fa-user"></i> TEAM</a>      <a href="#work" class="ag-bar-item ag-button"><i class="fa fa-th"></i> GALLERY</a>      <a href="#pricing" class="ag-bar-item ag-button"><i class="fa fa-usd"></i> PRICING</a>      <a href="#contact" class="ag-bar-item ag-button"><i class="fa fa-envelope"></i> CONTACT</a>    </div>    <a href="javascript:void(0)" class="ag-bar-item ag-button ag-right ag-hide-large ag-hide-medium" onclick="ag_open()">      <i class="fa fa-bars"></i>    </a>  </div></div><!-- ==============================Sidebar on small screens when clicking the menu icon======================================= --><nav class="ag-sidebar ag-bar-block ag-black ag-card-2 ag-animate-left ag-hide-medium ag-hide-large" style="display:none" id="mySidebar">  <a href="javascript:void(0)" onclick="ag_close()" class="ag-bar-item ag-button ag-large ag-padding-16">Close ×</a>  <a href="#about" onclick="ag_close()" class="ag-bar-item ag-button">ABOUT</a>  <a href="#team" onclick="ag_close()" class="ag-bar-item ag-button">TEAM</a>  <a href="#work" onclick="ag_close()" class="ag-bar-item ag-button">GALLERY</a>  <a href="#pricing" onclick="ag_close()" class="ag-bar-item ag-button">PRICING</a>  <a href="#contact" onclick="ag_close()" class="ag-bar-item ag-button">CONTACT</a></nav><!-- ==============================Header with full-height image ========================================================= --><header class="bgimg-1 ag-display-container" id="home">  <div class="ag-display-middle ag-text-white">    <span class="hedfontsml"><br><i>Welcome To Classic</i></span><br>    <span class="hedfontbig"><b>IT'S TIME TO MEET THE NEW YOU!</b></span>    <p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+   <a href="#pricing" class="ag-button ag-yellow ag-padding-large ag-large ag-margin-top ag-hover-opacity-off ag-text-black">	<b>CUT MY HAIR</b></a></p>  </div>   </header><!-- =============================About Section ======================================================================= --><div class="ag-container ag-yellow" style="padding:128px 16px" id="about">  		<h3 class="ag-center">ABOUT THE COMPANY</h3> 	 	<p class="ag-center ag-large"><b><i>Luxury</i></b><br> <i>That’s what Classic is about. Your hair is your statement, be bold and make your statement. Here at Classic, we make hair about you. With fully customizable styles and designs accessible from the comforts of your home, we make that bold statement easier to make than ever before.</i></p>  	<div class="ag-row-padding ag-center" style="margin-top:64px">   		
+		 <div class="ag-third">      			<i class="fa fa-car ag-margin-bottom ag-jumbo ag-center"></i>     			 <p class="ag-large">We Come ...</p>      			<p>.... to your home at the time booked by you</p>    		</div>    		
+		<div class="ag-third">      			<i class="fa fa-scissors ag-margin-bottom ag-jumbo"></i>      			<p class="ag-large">We Style ....</p>     			 <p>.... cut, color, shampoo and fix your hair as per your choice</p>    		</div>		
+		<div class="ag-third">      			<i class="fa fa-heart ag-margin-bottom ag-jumbo"></i>      			<p class="ag-large">You smile ...</p>      			<p>... at your brand new look</p>    		</div>    	 	</div>
+<div id="portfolio" class="nw-container-fluid text-center bg-grey">
+	  <h4>Some of the at home services we offer</h4>
+  		<div class="row text-center slideanim">
+    			<div class="col-sm-4">
+      				<div class="thumbnail">
+        				<img src="Womens cut.jpeg" width="400" height="300">
+       					 <p><strong>HAIR CUT</strong></p>
+        				<p>description of haircut</p>
+      				</div>
+    			</div>
+    			<div class="col-sm-4">
+      				<div class="thumbnail">
+        				<img src="color.jpeg" width="400" height="300">
+        				<p><strong>HAIR SPA</strong></p>
+        				<p>description of hairspa</p>
+     			 	</div>
+    			</div>
+    			<div class="col-sm-4">
+      				<div class="thumbnail">
+        				<img src="bridal.jpeg" width="400" height="300">
+        				<p><strong>SPECIAL STYLES</strong></p>
+        				<p>description of special styles</p>
+      				</div>
+    			</div>
+  		</div>
+</div>
+</div>
+<!-- ============================= Team Section====================================================================== --><div class="ag-container ag-dark-grey" style="padding:128px 16px" id="team">  		<h3 class="ag-center">THE TEAM</h3>  		<p class="ag-center ag-large">Meet our Stylists</p>  	<div class="ag-row-padding ag-grayscale" style="margin-top:64px">    		<div class="ag-col l6 m6 ag-margin-bottom">      			<div class="ag-card">        			<img src="team1.jpg" alt="AG" style="width:67%">        				<div class="ag-container ag-black">          					<h3>AG</h3>          					<p>Some description here</p>        				</div>      			</div>   		 </div>    		<div class="ag-col l6 m6 ag-margin-bottom">      			<div class="ag-card">        			<img src="team2.jpg" alt="ST" style="width:100%">        				<div class="ag-container ag-black">          					<h3>ST</h3>          					<p>Some description here</p>          					</div>      			</div>   		 </div>    		      </div></div>
+
+<!-- ==================================Gallery Section======================================================== --><div class="ag-container ag-yellow" style="padding:128px 16px" id="work">  <h3 class="ag-center">OUR WORK</h3>  <p class="ag-center ag-large">Classic has a long list of succcess stories and happy clientele. Below are some of our satisfied customers who received the hair help they needed right in the comforts of their home and today are the beacons of bold statements and luxury</p>  <div class="ag-row-padding" style="margin-top:64px">    <div class="ag-col l3 m6">      <img src="galpic1.jpg" style="width:100%" onclick="onClick(this)" class="ag-hover-opacity" alt="Pic 1">    </div>    <div class="ag-col l3 m6">      <img src="galpic2.jpg" style="width:100%" onclick="onClick(this)" class="ag-hover-opacity" alt="Pic 2">    </div>    <div class="ag-col l3 m6">      <img src="galpic3.jpg" style="width:95%" onclick="onClick(this)" class="ag-hover-opacity" alt="Pic 3">    </div>    <div class="ag-col l3 m6">      <img src="galpic4.jpg" style="width:100%" onclick="onClick(this)" class="ag-hover-opacity" alt="Pic 4">    </div>  </div></div><!-- Modal for full size images on click--><div id="modal01" class="ag-modal ag-black" onclick="this.style.display='none'">  <span class="ag-button ag-xxlarge ag-black ag-padding-large ag-display-topright" title="Close Modal Image">×</span>  <div class="ag-modal-content ag-animate-zoom ag-center ag-transparent ag-padding-64">    <img id="img01" class="ag-image">    <p id="caption" class="ag-opacity ag-large"></p>  </div></div>
+
+
+<!-- ==================================Pricing Section======================================================== -->
+
+<div id="pricing" class="nw-container-fluid bg-dark">
+  <div class="text-center">
+    <h2>Pricing</h2>
+    <h4>Choose a plan that works for you</h4>
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>One Time</h1>
+        </div>
+        <div class="panel-body">
+          Schedule a one time appoinment
+        </div>
+        <div class="panel-footer">
+          <h3>$85</h3>
+          <h4>per hour</h4>
+          <a href="cart.html" button class="btn btn-lg ag-yellow">Book Now</a></button>
+        </div>
+      </div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Style &#38; Maintain</h1>
+        </div>
+        <div class="panel-body">
+          We will set up a regular visitation schedule to maintain your new look
+        </div>
+        <div class="panel-footer">
+          <h3>$65</h3>
+          <h4>per month, annual contract</h4>
+          <a href="cart.html" button class="btn btn-lg ag-yellow">Book Now</a></button>
+        </div>
+      </div>      
+    </div>       
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Premium</h1>
+        </div>
+        <div class="panel-body">
+         We will set up a regular visitation schedule to maintain your new look and offer an additional touch up visit per month for any special occasion. 
+        </div>
+        <div class="panel-footer">
+          <h3>$75</h3>
+          <h4>per month, annual contract</h4>
+          <a href="cart.html" button class="btn btn-lg ag-yellow">Book Now</a></button>
+        </div>
+      </div>      
+    </div>    
+  </div>
+</div>
+
+<!-- ==================================Contact Section======================================================== -->
+<div id="contact" class="nw-container-fluid ag-yellow">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Johns Creek, Georgia</p>
+      <p><span class="glyphicon glyphicon-phone"></span> (470) 254-3828</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <a href="contactformsubmit.html" button class="btn btn-default pull-right" type="submit">Send</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================================Testimonials======================================================== -->
+<div id="test" class="nw-container-fluid bg-dark">
+<br><h2>What our customers say</h2>
+ <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4>"Classic is the best. I am so happy with the result!"<br><span>Famous Person </span></h4>
+      </div>
+      <div class="item">
+        <h4>"One word... WOW!!"<br><span>Ordinary Person</span></h4>
+      </div>
+      <div class="item">
+        <h4>"Could I... BE any more happy with my new look?"<br><span>Ditzy Teen</span></h4>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+</div>
+<!-- ==================== Footer ============================================= --><footer class="ag-center ag-black ag-padding-64">  <a href="#home" class="ag-button ag-light-grey"><i class="fa fa-arrow-up ag-margin-right"></i>To the top</a>  <div class="ag-xlarge ag-section">    <i class="fa fa-facebook-official ag-hover-opacity"></i>    <i class="fa fa-instagram ag-hover-opacity"></i>    <i class="fa fa-snapchat ag-hover-opacity"></i>    <i class="fa fa-pinterest-p ag-hover-opacity"></i>    <i class="fa fa-twitter ag-hover-opacity"></i>    <i class="fa fa-linkedin ag-hover-opacity"></i>  </div>  <p>Powered by <a href="http://www.northviewhigh.com" target="_blank" class="ag-hover-text-green">NHS FBLA Team</a></p></footer>
+
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
+
