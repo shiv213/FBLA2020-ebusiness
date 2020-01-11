@@ -1,0 +1,7 @@
+{
+  "short_name": "CLassic",
+  "name": "Classic",
+  "icons": [],
+  "start_url": "/index.html",
+  "display": "fullscreen"
+}

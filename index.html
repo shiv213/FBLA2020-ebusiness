@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Classic</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/Article-List.css">
+    <link rel="stylesheet" href="assets/css/clean-responsive-pricing.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+    <link rel="stylesheet" href="assets/css/Lightbox-Gallery.css">
+    <link rel="stylesheet" href="assets/css/MUSA_carousel-product-cart-slider.css">
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-analytics.js"></script>
+    <script src="assets/js/firebase.js"></script>
+</head>
+
+<body id="page-top">
+<nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark" id="mainNav">
+    <div class="container">
+        <button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right"
+                type="button" data-toogle="collapse" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+        <a href="index.html"><img src="assets/img/logo.svg" style="height: 50px; padding: 0.25%;"></a>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="nav navbar-nav ml-auto text-uppercase">
+                <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="#about">About</a>
+                </li>
+                <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger"
+                                                            href="#gallery">Gallery</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="#plans">PRICING</a>
+                </li>
+                <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="#team">Team</a>
+                </li>
+                <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="cart.html">CART</a>
+                </li>
+                <li class="nav-item" id="logoutNav" role="presentation" hidden>
+                    <a class="nav-link js-scroll-trigger" onclick="logOut()" href="#">LOGOUT</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" href="account.html">
+                        <i class="fas fa-user"></i>
+                        <img style="border-radius: 50%;" id="profileImg" src=""/>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<header class="masthead" style="background-image: url('assets/img/mainbg.jpeg');">
+    <div class="container">
+        <div class="intro-text" style="padding-top: 25%;padding-bottom: 25%;">
+            <div class="intro-lead-in"><span>Welcome To Classic!</span></div>
+            <div class="intro-heading text-uppercase"><span>In-Home HairCare</span></div>
+            <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" role="button" href="#about">Tell me
+                more</a></div>
+    </div>
+</header>
+<section id="about" style="padding: 150px 0px;padding-bottom: 25px;padding-top: 100px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="text-uppercase section-heading">ABOUT Us<br></h2>
+                <h3 class="text-muted section-subheading"><strong><em>Luxury</em></strong><br><em>That’s what Classic is
+                    about. Your hair is your statement, be bold and make your statement. Here at Classic, we make hair
+                    about you. With fully customizable styles and designs accessible from the comforts of your home, we
+                    make that bold statement easier to make than ever before.</em><br></h3>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-4"><span class="fa-stack fa-4x"><i class="fa fa-circle fa-stack-2x text-primary"></i><i
+                    class="fa fa-car fa-stack-1x fa-inverse"></i></span>
+                <h4 class="section-heading">We come...</h4>
+                <p class="text-muted">to your home at the time booked by you<br></p>
+            </div>
+            <div class="col-md-4"><span class="fa-stack fa-4x"><i class="fa fa-circle fa-stack-2x text-primary"></i><i
+                    class="fa fa-scissors fa-stack-1x fa-inverse"></i></span>
+                <h4 class="section-heading">We Style...</h4>
+                <p class="text-muted">cut, color, shampoo and fix your hair as per your choice<br></p>
+            </div>
+            <div class="col-md-4"><span class="fa-stack fa-4x"><i class="fa fa-circle fa-stack-2x text-primary"></i><i
+                    class="fa fa-smile-o fa-stack-1x fa-inverse"></i></span>
+                <h4 class="section-heading">You Smile...</h4>
+                <p class="text-muted">at your brand new look!<br></p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Start: Article List -->
+<div class="article-list">
+    <div class="container">
+        <!-- Start: Intro -->
+        <div class="intro">
+            <h2 class="text-center" style="margin-bottom: 5px;padding-top: 50px;">Services</h2>
+            <p class="text-center">Our most popular home services</p>
+        </div>
+        <!-- End: Intro -->
+        <!-- Start: Articles -->
+        <div class="row articles">
+            <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="assets/img/about/cut.jpeg"></a>
+                <h3 class="name"><strong>Customized Cut</strong><br></h3>
+                <p class="description">Our hair designers are specially trained to work with you to give you a beautiful
+                    cut that complements your personality and your lifestyle. Whether you’re looking for a trendy new
+                    look or a classic, elegant style, you’ll leave looking
+                    and feeling beautiful.</p>
+            </div>
+            <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid"
+                                                                 src="assets/img/about/color.jpeg"></a>
+                <h3 class="name"><strong>Personalized Color &amp; Highlights</strong></h3>
+                <p class="description">There is nothing more beautiful than the perfect combination of hair color, cut
+                    and style. Our colorists are up-to-date on all the latest colors and trends, and they will work with
+                    you to create the perfect hair color and/or highlights.&nbsp;<br></p>
+            </div>
+            <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="assets/img/about/bridal.jpeg"
+                                                                 alt=""></a>
+                <h3 class="name"><strong>Bridal &amp; Wedding Hairstyles</strong></h3>
+                <p class="description">At Classic we take your special day very seriously. Whether you want the elegance
+                    of a classic up-do or a more contemporary look, we’re here to serve you.<br></p>
+            </div>
+        </div>
+        <!-- End: Articles -->
+    </div>
+</div>
+<!-- End: Article List -->
+<section id="gallery" class="section-heading" style="padding-top: 75px;padding-bottom: 75px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="text-uppercase section-heading">Gallery</h2>
+                <h3 class="section-subheading text-muted">Classic has a long list of succcess stories and happy
+                    clientele. Below are some of our satisfied customers who received the hair help they needed right in
+                    the comforts of their home and today are the beacons of bold statements and
+                    luxury<br></h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-md-4 portfolio-item">
+
+                <div class="portfolio-hover">
+                    <div class="portfolio-hover-content"><i style="color: #FED136" class="fa fa-plus fa-3x"></i></div>
+                </div>
+                <img class="img-fluid" src="assets/img/portfolio/1-thumbnail.jpg">
+                <div class="portfolio-caption">
+                    <h4>Threads</h4>
+                    <p class="text-muted">Illustration</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 portfolio-item">
+
+                <div class="portfolio-hover">
+                    <div class="portfolio-hover-content"><i style="color: #FED136" class="fa fa-plus fa-3x"></i></div>
+                </div>
+                <img class="img-fluid" src="assets/img/portfolio/2-thumbnail.jpg">
+                <div class="portfolio-caption">
+                    <h4>Explore</h4>
+                    <p class="text-muted">Graphic Design</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 portfolio-item">
+
+                <div class="portfolio-hover">
+                    <div class="portfolio-hover-content"><i style="color: #FED136" class="fa fa-plus fa-3x"></i></div>
+                </div>
+                <img class="img-fluid" src="assets/img/portfolio/3-thumbnail.jpg">
+                <div class="portfolio-caption">
+                    <h4>Finish</h4>
+                    <p class="text-muted">Identity</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 portfolio-item">
+
+                <div class="portfolio-hover">
+                    <div class="portfolio-hover-content"><i style="color: #FED136" class="fa fa-plus fa-3x"></i></div>
+                </div>
+                <img class="img-fluid" src="assets/img/portfolio/4-thumbnail.jpg">
+                <div class="portfolio-caption">
+                    <h4>Lines</h4>
+                    <p class="text-muted">Branding</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 portfolio-item">
+                <div class="portfolio-hover">
+                    <div class="portfolio-hover-content"><i style="color: #FED136" class="fa fa-plus fa-3x"></i></div>
+                </div>
+                <img class="img-fluid img-fluid" src="assets/img/portfolio/5-thumbnail.jpg">
+                <div class="portfolio-caption">
+                    <h4>Southwest</h4>
+                    <p class="text-muted">Website Design</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 portfolio-item">
+                <div class="portfolio-hover">
+                    <div class="portfolio-hover-content"><i style="color: #FED136" class="fa fa-plus fa-3x"></i></div>
+                </div>
+                <img class="img-fluid" src="assets/img/portfolio/6-thumbnail.jpg">
+                <div class="portfolio-caption">
+                    <h4>Window</h4>
+                    <p class="text-muted">Photography</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2 class="text-center section-heading" style="padding-top: 5%;">Check out our products <a
+            href="products.html">here</a></h2>
+</section>
+<section id="plans" class="js-scroll-trigger" href="products.html" style="padding-top: 100px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="text-uppercase">Pricing</h2>
+                <h3 class="text-muted section-subheading">We offer 100% satisfaction and a money back guarantee</h3>
+                <!-- Start: clean responsive pricing -->
+                <div class="container">
+                    <div class="card-deck mb-3 text-center">
+                        <div class="card mb-4 box-shadow">
+                            <div class="card-header">
+                                <h4 class="my-0 font-weight-normal">One Time</h4>
+                            </div>
+                            <div class="card-body">
+                                <h1 class="card-title pricing-card-title">$25
+                                    <small class="text-muted">/ hr</small>
+                                </h1>
+                                <ul class="list-unstyled mt-3 mb-4">
+                                    <li>One time appointment</li>
+                                    <li>Custom style</li>
+                                    <li>Email support</li>
+                                    <br/>
+                                    <br/>
+                                </ul>
+                                <button type="button" class="btn btn-lg btn-block btn-primary">Book Now</button>
+                            </div>
+                        </div>
+                        <div class="card mb-4 box-shadow">
+                            <div class="card-header">
+                                <h4 class="my-0 font-weight-normal">Style & Maintain</h4>
+                            </div>
+                            <div class="card-body">
+                                <h1 class="card-title pricing-card-title">$50
+                                    <small class="text-muted">/ mo</small>
+                                </h1>
+                                <ul class="list-unstyled mt-3 mb-4">
+                                    <li>Monthly Plan</li>
+                                    <li>Custom style</li>
+                                    <li>Choice stylists</li>
+                                    <li>Priority email support</li>
+                                    <br/>
+                                </ul>
+                                <button type="button" class="btn btn-lg btn-block btn-primary">Book Now</button>
+                            </div>
+                        </div>
+                        <div class="card mb-4 box-shadow">
+                            <div class="card-header">
+                                <h4 class="my-0 font-weight-normal">Premium</h4>
+                            </div>
+                            <div class="card-body">
+                                <h1 class="card-title pricing-card-title">$75
+                                    <small class="text-muted">/ mo</small>
+                                </h1>
+                                <ul class="list-unstyled mt-3 mb-4">
+                                    <li>Premium Monthly Plan</li>
+                                    <li>Custom style</li>
+                                    <li>Choice stylists</li>
+                                    <li>Free 24 hour cancellation</li>
+                                    <li>Phone and email support</li>
+                                </ul>
+                                <button type="button" class="btn btn-lg btn-block btn-primary">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End: clean responsive pricing -->
+            </div>
+        </div>
+    </div>
+</section>
+<section id="team" class="bg-light">
+    <h2 class="text-uppercase text-center">TEAM</h2>
+    <h3 class="text-center text-muted section-subheading">Meet the team behind Classic</h3>
+    <div class="container">
+        <div class="row justify-content-center" style="margin: auto;">
+            <div class="col-sm-4 col-lg-4">
+                <div class="team-member"><img class="rounded-circle mx-auto" src="assets/img/team/1.jpg">
+                    <h4>Shiv Trivedi</h4>
+                    <p class="text-muted">Lead Developer</p>
+                    <ul class="list-inline social-buttons">
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="team-member"><img class="rounded-circle mx-auto" src="assets/img/team/3.jpg">
+                    <h4>Aditya Gupta</h4>
+                    <p class="text-muted">Lead Designer</p>
+                    <ul class="list-inline social-buttons">
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</section>
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-6 col-md-3"><a href="https://www.fbla-pbl.org/"><img class="img-fluid d-block mx-auto"
+                                                                                    src="assets/img/fbla.png"
+                                                                                    style="height: 75px;"></a></div>
+            <div class="col-sm-6 col-md-3"><a src="assets/img/fbla.png" style="height: 50px;"
+                                              href="http://northviewhigh.com/"><img class="img-fluid d-block mx-auto"
+                                                                                    src="assets/img/nhs.png"
+                                                                                    style="height: 75px;"></a></div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4"><span class="copyright">Copyright&nbsp;© Classic 2020</span></div>
+            <div class="col-md-4">
+                <ul class="list-inline social-buttons">
+                    <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul class="list-inline quicklinks">
+                    <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                    <li class="list-inline-item"><a href="#">Terms of Use</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="assets/js/agency.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+</body>
+
+</html>
