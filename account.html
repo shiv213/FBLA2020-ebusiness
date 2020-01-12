@@ -80,18 +80,22 @@
     //     })
     //     .catch(function (error) {
     //         // Handle Errors here.
-    //         var errorCode = error.code;
-    //         var errorMessage = error.message;
+    //         let errorCode = error.code;
+    //         let errorMessage = error.message;
     //     });
 
-    var ui = new firebaseui.auth.AuthUI(firebase.auth());
-    var uiConfig = {
+    let ui = new firebaseui.auth.AuthUI(firebase.auth());
+    const urlParams = new URLSearchParams(window.location.search);
+    const isCheckout = (urlParams.get('checkout') === 'true');
+    let uiConfig = {
         callbacks: {
             signInSuccessWithAuthResult: function (authResult, redirectUrl) {
                 // User successfully signed in.
                 // Return type determines whether we continue the redirect automatically
                 // or whether we leave that to developer to handle.
-                // TODO SHOW PROFILE
+                if (isCheckout) {
+                    window.location.href = 'cart.html';
+                }
                 updateLoggedIn();
                 return false;
             },
@@ -130,11 +134,18 @@
         privacyPolicyUrl: '<your-privacy-policy-url>'
     };
     // console.log(user);
+    window.addEventListener('load', function () {
+        if (typeof user === 'undefined' || user === null || !user) {
+            document.getElementById('login').hidden = false;
+            ui.start('#firebaseui-auth-container', uiConfig);
+        } else {
+            updateLoggedIn();
+        }
+    });
     firebase.auth().onAuthStateChanged(function (user) {
         if (!user) {
+            // document.getElementById('login').hidden = false;
             ui.start('#firebaseui-auth-container', uiConfig);
-            document.getElementById('LOGIN').hidden = false;
-
         } else {
             updateLoggedIn();
         }
@@ -144,30 +155,40 @@
 
         document.getElementById('loader').style.display = 'none';
         document.getElementById('name').innerText = name;
+        document.getElementById('email').innerText = email;
         if (photoUrl != null) {
             document.getElementById('profilePicture').src = photoUrl;
             document.getElementById("profilePicture").height = window.innerHeight * .2;
             document.getElementById("profilePicture").alt = name;
+        } else {
+            document.getElementById("profilePicture").className = "fas fa-user fa-7x";
         }
-        database.ref('users/' + uid + '/subscription').once('value').then(function (snapshot) {
-            document.getElementById("subscription").innerHTML = snapshot.val() || 'None';
-        });
+        // database.ref('users/' + uid + '/order').once('value').then(function (snapshot) {
+        //     if(snapshot.val() != null) {
+        //         document.getElementById("order").innerHTML = snapshot.val()
+        //     } else {
+        //         document.getElementById("order").hidden = true;
+        //         document.getElementById("orderH").hidden = true;
+        //     }
+        // });
         document.getElementById('profile').hidden = false;
-        document.getElementById('LOGIN').hidden = true;
+        document.getElementById('login').hidden = true;
     }
 </script>
 <div style="margin-top: 15%;"></div>
-<h1 id="LOGIN" style="text-align: center" hidden>Log In</h1>
-<div id="firebaseui-auth-container"></div>
-<div style="text-align: center" id="loader">Loading...</div>
-
+<div id="login" style="padding-top: 1%" hidden>
+    <h1 style="text-align: center">Sign Up/Log In</h1>
+    <div id="firebaseui-auth-container"></div>
+    <div style="text-align: center" id="loader">Loading...</div>
+</div>
 <div style="text-align: center" id="profile" hidden>
     <img style="border-radius: 50%" id="profilePicture" src=""/>
     <br/>
     <br/>
     <h1 style="" id="name"></h1>
-    <h2>Subscription Status: </h2>
-    <h3 id="subscription">None</h3>
+    <h2 id="email"></h2>
+    <!--<h2 id="orderH">Pending Order: </h2>-->
+    <!--<h3 id="order">None</h3>-->
 </div>
 <div class="container"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

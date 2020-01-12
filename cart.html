@@ -30,6 +30,9 @@
     <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-analytics.js"></script>
     <script src="assets/js/firebase.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="https://checkout.stripe.com/checkout.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </head>
 
 <body>
@@ -64,7 +67,100 @@
         </div>
     </div>
 </nav>
+<header class="masthead" style="background-image: url('assets/img/mainbg.jpeg');">
+    <div class="container">
+    </div>
+</header>
+<section id="about" style="padding: 150px 0px;padding-bottom: 25px;padding-top: 100px;">
+    <div class="container">
+        <div style="margin: auto; max-width: 500px; padding: 20px; text-align: center;">
+            <form id="form">
+                <button class="btn btn-lg btn-block btn-primary" id="checkout">Checkout</button>
+                <div id="error" style="color: #e2000b;"></div>
+            </form>
+            <div id="thanks" style="display: none;">Thanks for your purchase!</div>
+        </div>
+    </div>
+</section>
 
+<script>
+    const STRIPE_PUBLIC_KEY = 'pk_test_dp1iIfRSs8UTNkWCUC5rSewl00WkpyaPDr'; // TODO: PUT YOUR STRIPE PUBLISHABLE KEY HERE
+    const FIREBASE_FUNCTION = 'https://us-central1-fbla-ebusiness2020.cloudfunctions.net/charge'; // TODO: PUT YOUR FIREBASE FUNCTIONS URL HERE
+    const stripe = Stripe(STRIPE_PUBLIC_KEY);
+    const charge_amount = 1;
+    const charge_currency = 'usd';
+    const charge_description = "INSERT ORDER OVERVIEW HERE";
+    const elForm = document.getElementById('form');
+    const elCheckout = document.getElementById('checkout');
+    const elError = document.getElementById('error');
+    const elThanks = document.getElementById('thanks');
+
+    addCheckoutMethod();
+
+    function addCheckoutMethod() {
+        const handler = StripeCheckout.configure({
+            key: STRIPE_PUBLIC_KEY,
+            locale: 'auto',
+            token: async token => {
+                // Pass the received token to our Firebase function
+                let res = charge(token, charge_amount, charge_currency);
+                if (res.body.error) {
+                    console.log(res.body.error);
+                }
+
+                // Card successfully charged
+                elForm.style.display = 'none';
+                elThanks.style.display = 'block';
+                console.log(user.email);
+                Email.send({
+                    SecureToken: 'a8f0ceb1-d3f7-48dd-9831-4c84d158425c',
+                    To: user.email,
+                    From: 'contact@shivvtrivedi.com',
+                    Subject: 'Thank you for your purchase!',
+                    Body: `Thank you for your purchase of $${(charge_amount / 100).toFixed(2)} at Classic. <br> -The Classic Team`
+                }).then(
+                    // alert('Sent! Check your email!')
+                );
+
+            }
+        });
+
+        elCheckout.addEventListener('click', e => {
+            e.preventDefault();
+            if (user) {
+                handler.open({
+                    name: 'Classic - Checkout',
+                    description: charge_description,
+                    amount: charge_amount,
+                    currency: charge_currency,
+                    email: user.email
+                    // receipt_email: email,
+                });
+            } else {
+                window.location.href = "account.html?checkout=true";
+            }
+        });
+
+        // Close Checkout on page navigation
+        window.addEventListener('popstate', () => handler.close());
+    }
+
+    async function charge(token, amount, currency) {
+        const res = await fetch(FIREBASE_FUNCTION, {
+            method: 'POST',
+            body: JSON.stringify({
+                token,
+                charge: {
+                    amount,
+                    currency,
+                },
+            }),
+        });
+        const data = await res.json();
+        data.body = JSON.parse(data.body);
+        return data;
+    }
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>

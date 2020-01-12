@@ -1,5 +1,5 @@
 // Your web app's Firebase configuration
-var firebaseConfig = {
+const firebaseConfig = {
     apiKey: "AIzaSyCOEn76gMklx2Q4EVkoHdwmop-UPM3iV6s",
     authDomain: "fbla-ebusiness2020.firebaseapp.com",
     databaseURL: "https://fbla-ebusiness2020.firebaseio.com",
@@ -9,13 +9,14 @@ var firebaseConfig = {
     appId: "1:988148508318:web:bd4d6b38493fe5869cfd8f",
     measurementId: "G-Z0X8756YEH"
 };
+
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 window.database = firebase.database();
 
 // $(document).ready(function() { /* code here */ });
-var name, email, photoUrl, uid, emailVerified;
+let name, email, photoUrl, uid, emailVerified;
 firebase.auth().onAuthStateChanged(function (user) {
     window.user = user;
     if (user) {
