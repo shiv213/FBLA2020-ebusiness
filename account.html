@@ -154,12 +154,12 @@
     function updateLoggedIn() {
 
         document.getElementById('loader').style.display = 'none';
-        document.getElementById('name').innerText = name;
-        document.getElementById('email').innerText = email;
-        if (photoUrl != null) {
-            document.getElementById('profilePicture').src = photoUrl;
+        document.getElementById('name').innerText = window.name;
+        document.getElementById('email').innerText = window.email;
+        if (window.photoUrl != null) {
+            document.getElementById('profilePicture').src = window.photoUrl;
             document.getElementById("profilePicture").height = window.innerHeight * .2;
-            document.getElementById("profilePicture").alt = name;
+            document.getElementById("profilePicture").alt = window.name;
         } else {
             document.getElementById("profilePicture").className = "fas fa-user fa-7x";
         }
@@ -189,6 +189,7 @@
     <h2 id="email"></h2>
     <!--<h2 id="orderH">Pending Order: </h2>-->
     <!--<h3 id="order">None</h3>-->
+    <a href="#" onclick="logOut()"><h2>Logout</h2></a>
 </div>
 <div class="container"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

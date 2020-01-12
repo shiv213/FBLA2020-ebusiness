@@ -37,10 +37,10 @@ firebase.auth().onAuthStateChanged(function (user) {
             }
             window.emailVerified = profile.email;
             window.uid = user.uid;
-            database.ref('users/').child(uid).update({
-                username: name,
-                email: email,
-                profile_picture: photoUrl
+            database.ref('users/').child(user.uid).update({
+                username: user.displayName,
+                email: user.email,
+                profile_picture: window.photoUrl
             });
             // else {
             //     database.ref('users/' + uid).set({
