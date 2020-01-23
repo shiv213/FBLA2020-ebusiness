@@ -42,18 +42,23 @@ firebase.auth().onAuthStateChanged(function (user) {
                 email: user.email,
                 profile_picture: window.photoUrl
             });
-            // else {
-            //     database.ref('users/' + uid).set({
-            //         username: name,
-            //         email: email,
-            //         profile_picture: photoUrl
-            //     });
-            // }
         });
         document.getElementById("logoutNav").hidden = false;
     } else {
     }
 });
+
+function oneAdd() {
+
+}
+
+function twoAdd() {
+
+}
+
+function threeAdd() {
+
+}
 
 function logOut() {
     event.preventDefault();
