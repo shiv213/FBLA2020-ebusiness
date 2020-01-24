@@ -138,7 +138,7 @@ function removeItem(x, y) {
 function getCart() {
     $("#items").empty();
     if (window.one > 0) {
-        $("#items").append(`<p><b>Basic Style</b></p><p>Get a world class custom haircut and styling in the comforts of your home from one of our trained hair aficionados. The basic package also comes with email support and a 24 hour cancellation policy.</p><p style="text-align: right;">Quantity: <a href="#" onclick="(function(){
+        $("#items").append(`<p><b>Basic Style</b></p><p>World Class Hair Care from the comforts of your home.</p><p style="text-align: right;">Quantity: <a href="#" onclick="(function(){
                         removeItem(1, false);
                         getCart();
                         return false;
@@ -149,7 +149,7 @@ function getCart() {
                     })();return false;"><i class="fas fa-plus-square"></i></a> <br/>$${window.one * 39.99}</p><hr>`);
     }
     if (window.two > 0) {
-        $("#items").append(`<p><b>Style and Maintain</b><p>The same world class experience offered in the basic service with additional benefits such as coloring and phone support.</p><p style="text-align: right;">Quantity: <a href="#" onclick="(function(){
+        $("#items").append(`<p><b>Style and Maintain</b><p>World Class Hair Care from the comforts of your home, plus coloring and up to 24 hour cancellation policy.</p><p style="text-align: right;">Quantity: <a href="#" onclick="(function(){
                         removeItem(2, false);
                         getCart();
                         return false;
@@ -161,7 +161,7 @@ function getCart() {
 
     }
     if (window.three > 0) {
-        $("#items").append(`<p><b></a> Premium Style</b><p>Get the world class experience not just for you but for your whole crew. Whether a wedding, a birthday, or some other occasion let our excellent hair professionals make your special day even better. Comes with the same benefits as the premium package and an additional benefit of 3 hour cancellation. </p><p style="text-align: right;">Quantity: <a href="#" onclick="(function(){
+        $("#items").append(`<p><b></a> Premium Style</b><p>Get the full world class hair experience with premium benefits such as bridal design and a 3 hour cancellation policy. </p><p style="text-align: right;">Quantity: <a href="#" onclick="(function(){
                         removeItem(3, false);
                         getCart();
                         return false;
