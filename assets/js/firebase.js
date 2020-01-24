@@ -193,6 +193,6 @@ function logOut() {
     firebase.auth().signOut().catch(function (err) {
         console.log(err);
     });
-    window.location = "index.html";
+    window.location.href = "index.html";
     document.getElementById("logoutNav").hidden = true;
 }

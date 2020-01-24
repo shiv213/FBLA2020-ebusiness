@@ -917,6 +917,19 @@
                 }).then(
                     console.log("Sent! Check your email!")
                 );
+                database.ref('users/' + user.uid + '/cart').child(1).update({
+                    quantity: 0,
+                    price: 39.99
+                });
+                database.ref('users/' + user.uid + '/cart').child(2).update({
+                    quantity: 0,
+                    price: 59.99
+                });
+                database.ref('users/' + user.uid + '/cart').child(3).update({
+                    quantity: 0,
+                    price: 74.99
+                });
+                window.location.href = "index.html";
 
             }
         });
