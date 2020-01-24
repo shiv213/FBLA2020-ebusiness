@@ -181,8 +181,9 @@ function getCart() {
         let subtotal = window.one * 39.99 + window.two * 59.99 + window.three * 74.99;
         let tax = subtotal * .04;
         $("#subtotal").append(`<div>Subtotal: <p style="display:inline; float: right;">$${(subtotal).toFixed(2)}</p></div><br/><div>Tax: <p style="display:inline; float: right;">$${(tax).toFixed(2)}</p></div><br/><div>Service Fee: <p style="display:inline; float: right;">$19.00</p></div><hr><div>Total: <p style="display:inline; float: right;">$${(subtotal + tax + 19).toFixed(2)}</p></div>`)
-        window.total = subtotal * 1.04 + 19;
+        window.total = 100 * (subtotal * 1.04 + 19);
     }
+    // document.querySelector("[name=amount]").value = window.total.toString();
 }
 
 function logOut() {
