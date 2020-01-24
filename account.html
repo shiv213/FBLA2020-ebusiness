@@ -147,7 +147,7 @@
             // document.getElementById('login').hidden = false;
             ui.start('#firebaseui-auth-container', uiConfig);
         } else {
-            updateLoggedIn();
+            waitCall();
         }
     });
 
@@ -198,9 +198,11 @@
 <script src="assets/js/agency.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
 <script>
-    $(window).on('load', function () {
-        updateLoggedIn();
-    });
+    function waitCall() {
+        $(window).on('load', function () {
+            updateLoggedIn();
+        });
+    }
 </script>
 </body>
 
