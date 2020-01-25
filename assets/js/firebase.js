@@ -66,6 +66,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 window.three = window['3_count'] || 0;
 
             });
+            if (window.location.href.includes("account.html")) {
+                updateLoggedIn();
+            }
+            if (window.location.href.includes("cart.html")) {
+                getCart();
+            }
         } else {
         }
     });
@@ -99,7 +105,7 @@ function addItem(x, y) {
             window.location.href = "cart.html";
         }
     } else {
-        window.location.href = "account.html?checkout=true";
+        window.location.href = "account.html";
     }
 }
 
@@ -131,7 +137,7 @@ function removeItem(x, y) {
             window.location.href = "cart.html";
         }
     } else {
-        window.location.href = "account.html?checkout=true";
+        window.location.href = "account.html";
     }
 }
 
@@ -146,7 +152,7 @@ function getCart() {
                         addItem(1, false);
                         getCart();
                         return false;
-                    })();return false;"><i class="fas fa-plus-square"></i></a> <br/>$${window.one * 39.99}</p><hr>`);
+                    })();return false;"><i class="fas fa-plus-square"></i></a> <br/>$${(window.one * 39.99).toFixed(2)}</p><hr>`);
     }
     if (window.two > 0) {
         $("#items").append(`<p><b>Style and Maintain</b><p>World Class Hair Care from the comforts of your home, plus coloring and up to 24 hour cancellation policy.</p><p style="text-align: right;">Quantity: <a href="#" onclick="(function(){
@@ -157,7 +163,7 @@ function getCart() {
                         addItem(2, false);
                         getCart();
                         return false;
-                    })();return false;"><i class="fas fa-plus-square"></i></a> <br/>$${window.two * 59.99}</p><hr>`);
+                    })();return false;"><i class="fas fa-plus-square"></i></a> <br/>$${(window.two * 59.99).toFixed(2)}</p><hr>`);
 
     }
     if (window.three > 0) {
@@ -169,7 +175,7 @@ function getCart() {
                         addItem(3, false);
                         getCart();
                         return false;
-                    })();return false;"><i class="fas fa-plus-square"></i></a> <br/>$${window.three * 74.99}</p><hr>`);
+                    })();return false;"><i class="fas fa-plus-square"></i></a> <br/>$${(window.three * 74.99).toFixed(2)}</p><hr>`);
 
     }
     if (window.one === 0 && window.two === 0 && window.three === 0) {
@@ -179,9 +185,11 @@ function getCart() {
         document.getElementById("rightColumn").hidden = false;
         $("#subtotal").empty();
         let subtotal = window.one * 39.99 + window.two * 59.99 + window.three * 74.99;
-        let tax = subtotal * .04;
-        $("#subtotal").append(`<div>Subtotal: <p style="display:inline; float: right;">$${(subtotal).toFixed(2)}</p></div><br/><div>Tax: <p style="display:inline; float: right;">$${(tax).toFixed(2)}</p></div><br/><div>Service Fee: <p style="display:inline; float: right;">$19.00</p></div><hr><div>Total: <p style="display:inline; float: right;">$${(subtotal + tax + 19).toFixed(2)}</p></div>`)
-        window.total = 100 * (subtotal * 1.04 + 19);
+        // let tax = subtotal * .04;
+        // $("#subtotal").append(`<div>Subtotal: <p style="display:inline; float: right;">$${(subtotal).toFixed(2)}</p></div><br/><div>Tax: <p style="display:inline; float: right;">$${(tax).toFixed(2)}</p></div><br/><div>Service Fee: <p style="display:inline; float: right;">$19.00</p></div><hr><div>Total: <p style="display:inline; float: right;">$${(subtotal + tax + 19).toFixed(2)}</p></div>`)
+        $("#subtotal").append(`<div>Total: <p style="display:inline; float: right;">$${(subtotal).toFixed(2)}</p></div><hr>`);
+        // window.total = 100 * (subtotal * 1.04 + 19);
+        window.total = 100 * (subtotal);
     }
     // document.querySelector("[name=amount]").value = window.total.toString();
 }

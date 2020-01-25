@@ -163,47 +163,43 @@
         } else {
             document.getElementById("profilePicture").className = "fas fa-user fa-7x";
         }
-        // database.ref('users/' + uid + '/order').once('value').then(function (snapshot) {
-        //     if(snapshot.val() != null) {
-        //         document.getElementById("order").innerHTML = snapshot.val()
-        //     } else {
-        //         document.getElementById("order").hidden = true;
-        //         document.getElementById("orderH").hidden = true;
-        //     }
-        // });
         document.getElementById('profile').hidden = false;
         document.getElementById('login').hidden = true;
     }
 </script>
-<div style="margin-top: 15%;"></div>
-<div id="login" style="padding-top: 1%" hidden>
-    <h1 style="text-align: center">Sign Up/Log In</h1>
-    <div id="firebaseui-auth-container"></div>
-    <div style="text-align: center" id="loader">Loading...</div>
-</div>
-<div style="text-align: center" id="profile" hidden>
-    <img style="border-radius: 50%" id="profilePicture" src=""/>
-    <br/>
-    <br/>
-    <h1 style="" id="name"></h1>
-    <h2 id="email"></h2>
-    <!--<h2 id="orderH">Pending Order: </h2>-->
-    <!--<h3 id="order">None</h3>-->
-    <a href="#" onclick="logOut()"><h2>Logout</h2></a>
-</div>
-<div class="container"></div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-<script src="assets/js/agency.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
-<script>
-    function waitCall() {
-        $(window).on('load', function () {
-            updateLoggedIn();
-        });
-    }
-</script>
+<section id="main" style="padding: 150px 0px;padding-bottom: 25px;padding-top: 100px;">
+    <div class="container">
+        <div style="margin-top: 5%;"></div>
+        <div id="login" style="padding-top: 1%" hidden>
+            <h1 style="text-align: center">Sign Up/Log In</h1>
+            <div id="firebaseui-auth-container"></div>
+            <div style="text-align: center" id="loader">Loading...</div>
+        </div>
+        <div style="text-align: center;" id="profile" hidden>
+            <img style="border-radius: 50%" id="profilePicture" src=""/>
+            <br/>
+            <br/>
+            <h1 style="" id="name"></h1>
+            <h2 id="email"></h2>
+            <!--<h2 id="orderH">Pending Order: </h2>-->
+            <!--<h3 id="order">None</h3>-->
+            <a href="#" onclick="logOut()"><h2>Logout</h2></a>
+        </div>
+        <div class="container"></div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script src="assets/js/agency.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+        <script>
+            function waitCall() {
+                $(window).on('load', function () {
+                    updateLoggedIn();
+                });
+            }
+        </script>
+    </div>
+</section>
 </body>
 
 </html>
