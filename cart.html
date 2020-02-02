@@ -31,32 +31,44 @@
     <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-analytics.js"></script>
     <script src="assets/js/firebase.js"></script>
     <style>
-        * {
-            box-sizing: border-box;
+        #cart {
+            padding-top: 150px;
         }
 
-        /* Create two unequal columns that floats next to each other */
-        .column {
-            float: none;
-            padding: 5%;
-            /*height: 300px; !* Should be removed. Only for demonstration *!*/
-        }
-
-        .left {
-            width: 60%;
-        }
-
-        .right {
-            width: 40%;
-        }
-
-        /* Clear floats after the columns */
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
+        @media (max-width: 992px) {
+            #cart {
+                padding-top: 100px;
+            }
         }
     </style>
+    <!-- Start of Async Drift Code -->
+    <script>
+        "use strict";
+
+        !function() {
+            var t = window.driftt = window.drift = window.driftt || [];
+            if (!t.init) {
+                if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+                t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
+                    t.factory = function(e) {
+                        return function() {
+                            var n = Array.prototype.slice.call(arguments);
+                            return n.unshift(e), t.push(n), t;
+                        };
+                    }, t.methods.forEach(function(e) {
+                    t[e] = t.factory(e);
+                }), t.load = function(t) {
+                    var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+                    o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+                    var i = document.getElementsByTagName("script")[0];
+                    i.parentNode.insertBefore(o, i);
+                };
+            }
+        }();
+        drift.SNIPPET_VERSION = '0.3.1';
+        drift.load('8r8pukavv6vb');
+    </script>
+    <!-- End of Async Drift Code -->
 </head>
 
 <body>
@@ -95,18 +107,16 @@
     <div class="container">
     </div>
 </header>
-<section id="about" style="padding: 150px 0px;padding-bottom: 25px;padding-top: 100px;">
+<section id="cart">
     <div class="container">
         <div class="row">
-            <div class="column left">
+            <div class="col-lg-8">
                 <h2>Shopping Cart</h2>
                 <hr style="border: 1px solid;">
                 <p id="emptyCart" hidden>Empty, check out our plans <a href="index.html#plans">here</a></p>
-                <div id="items">
-
-                </div>
+                <div id="items"></div>
             </div>
-            <div id="rightColumn" class="column right">
+            <div id="rightColumn" class="col" hidden>
                 <h2>Subtotal:</h2>
                 <hr style="border: 1px solid;">
                 <div id="totalsCheckout">
@@ -120,62 +130,47 @@
                     <script src="https://js.stripe.com/v3"></script>
 
                     <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
-                    <button class="btn btn-lg btn-block btn-primary" style="" id="checkout-button-sku_Gbsa6VPEk0jLh6"
-                            role="link">
+                    <button class="btn btn-lg btn-block btn-primary" style="" id="checkout-button"
+                            role="link" onclick="checkout()">
                         Checkout
                     </button>
 
                     <div id="error-message"></div>
-
                     <script>
-                        (function () {
-                            var stripe = Stripe('pk_test_dp1iIfRSs8UTNkWCUC5rSewl00WkpyaPDr');
+                        function checkout() {
+                            let stripe = Stripe('pk_test_dp1iIfRSs8UTNkWCUC5rSewl00WkpyaPDr');
+                            console.log("checkout clicked");
+                            // When the customer clicks on the button, redirect
+                            // them to Checkout.
+                            let x = [];
+                            if (window.one > 0) {
+                                x.push({sku: "sku_GbsZBLKRRlldC6", quantity: window.one});
+                            }
+                            if (window.two > 0) {
+                                x.push({sku: "sku_GbsZdlWVFT5tkp", quantity: window.two});
+                            }
+                            if (window.three > 0) {
+                                x.push({sku: "sku_Gbsa6VPEk0jLh6", quantity: window.three});
+                            }
+                            stripe.redirectToCheckout({
+                                items: x,
 
-                            var checkoutButton = document.getElementById('checkout-button-sku_Gbsa6VPEk0jLh6');
-                            checkoutButton.addEventListener('click', function () {
-                                // When the customer clicks on the button, redirect
-                                // them to Checkout.
-                                let x = [];
-                                let y = 0;
-                                if (window.one > 0) {
-                                    x.push({sku: "sku_GbsZBLKRRlldC6", quantity: window.one});
+                                // Do not rely on the redirect to the successUrl for fulfilling
+                                // purchases, customers may not always reach the success_url after
+                                // a successful payment.
+                                // Instead use one of the strategies described in
+                                // https://stripe.com/docs/payments/checkout/fulfillment
+                                successUrl: 'https://fbla-ebusiness2020.web.app/thanks.html',
+                                cancelUrl: 'https://fbla-ebusiness2020.web.app/cart.html',
+                                customerEmail: window.email,
+                            }).then(function (result) {
+                                if (result.error) {
+                                    // If `redirectToCheckout` fails due to a browser or network
+                                    // error, display the localized error message to your customer.
+                                    alert(result.error.message);
                                 }
-                                if (window.two > 0) {
-                                    x.push({sku: "sku_GbsZdlWVFT5tkp", quantity: window.two});
-                                }
-                                if (window.three > 0) {
-                                    x.push({sku: "sku_Gbsa6VPEk0jLh6", quantity: window.three});
-                                }
-                                while (window.one > 0) {
-                                    removeItem(0, false);
-                                }
-                                while (window.two > 0) {
-                                    removeItem(2, false);
-                                }
-                                while (window.three > 0) {
-                                    removeItem(3, false);
-                                }
-                                stripe.redirectToCheckout({
-                                    items: x,
-
-                                    // Do not rely on the redirect to the successUrl for fulfilling
-                                    // purchases, customers may not always reach the success_url after
-                                    // a successful payment.
-                                    // Instead use one of the strategies described in
-                                    // https://stripe.com/docs/payments/checkout/fulfillment
-                                    successUrl: 'https://fbla-ebusiness2020.web.app/thanks.html',
-                                    cancelUrl: 'https://fbla-ebusiness2020.web.app/cart.html',
-                                    customerEmail: window.email,
-                                })
-                                    .then(function (result) {
-                                        if (result.error) {
-                                            // If `redirectToCheckout` fails due to a browser or network
-                                            // error, display the localized error message to your customer.
-                                            alert(result.error.message);
-                                        }
-                                    });
                             });
-                        })();
+                        }
                     </script>
                     <div id="thanks" style="display: none;">Thanks for your purchase!</div>
                 </div>
@@ -192,6 +187,12 @@
 <script>
     $(window).on('load', function () {
         getCart();
+        setTimeout(function () {
+            getCart();
+        }, 1500);
+        window.setInterval(function () {
+            getCart();
+        }, 1000);
     });
 </script>
 </body>

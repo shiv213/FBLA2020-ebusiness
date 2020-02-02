@@ -13,6 +13,7 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
+
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 window.database = firebase.database();
@@ -58,7 +59,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 } else {
                     if (window.location.href.includes("cart.html")) {
                         document.getElementById("emptyCart").hidden = false;
-                        // document.getElementById("rightColumn").hidden = true;
+                        document.getElementById("rightColumn").hidden = true;
                     }
                 }
                 window.one = window['1_count'] || 0;
@@ -178,10 +179,11 @@ function getCart() {
                     })();return false;"><i class="fas fa-plus-square"></i></a> <br/>$${(window.three * 74.99).toFixed(2)}</p><hr>`);
 
     }
-    if (window.one === 0 && window.two === 0 && window.three === 0) {
-        document.getElementById("emptyCart").hidden = false;
+    if (typeof user === 'undefined'|| user === null || (window.one === 0 && window.two === 0 && window.three === 0)) {
         document.getElementById("rightColumn").hidden = true;
+        document.getElementById("emptyCart").hidden = false;
     } else {
+        document.getElementById("emptyCart").hidden = true;
         document.getElementById("rightColumn").hidden = false;
         $("#subtotal").empty();
         let subtotal = window.one * 39.99 + window.two * 59.99 + window.three * 74.99;
