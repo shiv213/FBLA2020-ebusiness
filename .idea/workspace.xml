@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c8611cb-a082-4402-b344-2a6bd2366097" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/FBLA2019-ebusiness.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FBLA2019-ebusiness.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/account.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bootstrap/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/bootstrap/css/bootstrap.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/img/team/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/team/1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/firebase.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/firebase.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/thanks.html" beforeDir="false" afterPath="$PROJECT_DIR$/thanks.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -27,7 +23,7 @@
         <entry file="file://$PROJECT_DIR$/products.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="92">
-              <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+              <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -44,7 +40,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/404.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
+            <state relative-caret-position="1403">
               <caret line="61" column="36" selection-start-line="61" selection-start-column="36" selection-end-line="61" selection-end-column="36" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -56,16 +52,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/thanks.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="80" column="32" selection-start-line="80" selection-start-column="32" selection-end-line="80" selection-end-column="32" />
+            <state relative-caret-position="46">
+              <caret line="71" selection-start-line="71" selection-end-line="71" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h1#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#h3#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -74,7 +69,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/account.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
+            <state relative-caret-position="506">
               <caret line="22" column="68" selection-start-line="22" selection-start-column="61" selection-end-line="22" selection-end-column="68" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -84,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="307" column="54" lean-forward="true" selection-start-line="307" selection-start-column="54" selection-end-line="307" selection-end-column="54" />
+            <state relative-caret-position="191">
+              <caret line="73" column="59" selection-start-line="73" selection-start-column="57" selection-end-line="73" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -96,7 +91,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cart.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
+            <state relative-caret-position="1610">
               <caret line="70" column="36" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -115,7 +110,7 @@
         <entry file="file://$PROJECT_DIR$/assets/js/firebase.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="4255">
-              <caret line="185" column="50" lean-forward="true" selection-start-line="185" selection-start-column="50" selection-end-line="185" selection-end-column="50" />
+              <caret line="185" column="50" selection-start-line="185" selection-start-column="50" selection-end-line="185" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -132,7 +127,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>addItem</find>
       <find>console</find>
       <find>shopping</find>
       <find>subtot</find>
@@ -162,6 +156,7 @@
       <find>emptyCart</find>
       <find>div class=&quot;row just</find>
       <find>pricing</find>
+      <find>&lt;a</find>
     </findStrings>
     <replaceStrings>
       <replace>window.two</replace>
@@ -197,12 +192,12 @@
         <option value="$PROJECT_DIR$/temp" />
         <option value="$PROJECT_DIR$/tempt.html" />
         <option value="$PROJECT_DIR$/functions/index.js" />
-        <option value="$PROJECT_DIR$/thanks.html" />
         <option value="$PROJECT_DIR$/assets/js/firebase.js" />
         <option value="$PROJECT_DIR$/account.html" />
         <option value="$PROJECT_DIR$/cart.html" />
         <option value="$PROJECT_DIR$/404.html" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/thanks.html" />
       </list>
     </option>
   </component>
@@ -217,6 +212,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -244,7 +240,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -297,7 +292,8 @@
       <workItem from="1580062918641" duration="4758000" />
       <workItem from="1580164777020" duration="10000" />
       <workItem from="1580585066720" duration="601000" />
-      <workItem from="1580686284230" duration="653000" />
+      <workItem from="1580686284230" duration="968000" />
+      <workItem from="1580736804807" duration="456000" />
     </task>
     <task id="LOCAL-00001" summary="authentication working">
       <created>1578704309377</created>
@@ -401,7 +397,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83994000" />
+    <option name="totallyTimeSpent" value="84765000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -428,7 +424,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32892805" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.26872247" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.16740088" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.15712188" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32892805" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32892805" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -522,16 +518,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/firebase.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4255">
-          <caret line="185" column="50" lean-forward="true" selection-start-line="185" selection-start-column="50" selection-end-line="185" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/404.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
+        <state relative-caret-position="1403">
           <caret line="61" column="36" selection-start-line="61" selection-start-column="36" selection-end-line="61" selection-end-column="36" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -542,16 +531,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/products.html">
+    <entry file="file://$PROJECT_DIR$/account.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+        <state relative-caret-position="506">
+          <caret line="22" column="68" selection-start-line="22" selection-start-column="61" selection-end-line="22" selection-end-column="68" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cart.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
+        <state relative-caret-position="1610">
           <caret line="70" column="36" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
           <folding>
             <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -565,34 +558,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/thanks.html">
+    <entry file="file://$PROJECT_DIR$/assets/js/firebase.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="80" column="32" selection-start-line="80" selection-start-column="32" selection-end-line="80" selection-end-column="32" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h1#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/account.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="22" column="68" selection-start-line="22" selection-start-column="61" selection-end-line="22" selection-end-column="68" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="4255">
+          <caret line="185" column="50" selection-start-line="185" selection-start-column="50" selection-end-line="185" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="307" column="54" lean-forward="true" selection-start-line="307" selection-start-column="54" selection-end-line="307" selection-end-column="54" />
+        <state relative-caret-position="191">
+          <caret line="73" column="59" selection-start-line="73" selection-start-column="57" selection-end-line="73" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/products.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thanks.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#h3#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -11,5 +11,6 @@
     <orderEntry type="library" name="bootstrap.bundle" level="application" />
     <orderEntry type="library" name="lightbox" level="application" />
     <orderEntry type="library" name="checkout" level="application" />
+    <orderEntry type="library" name="widget" level="application" />
   </component>
 </module>
